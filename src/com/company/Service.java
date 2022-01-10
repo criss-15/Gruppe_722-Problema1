@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 public class Service {
 
     public List<Offerte> sortListeOffertePrice(List<Offerte> liste) {
-        Comparator<Offerte> studentComparator = Comparator.comparing(Offerte::getPrice);
+        Comparator<Offerte> studentComparator = Comparator.comparing(Offerte::getPrice).reversed();
         return liste.stream().sorted(studentComparator).toList();
     }
 }
