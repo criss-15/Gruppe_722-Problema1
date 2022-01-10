@@ -47,6 +47,7 @@ public class Offerte {
     public double getMehrwertsteuer() {
         return mehrwertsteuer;
     }
+    //
 
     public void setMehrwertsteuer(double mehrwertsteuer) {
         this.mehrwertsteuer = mehrwertsteuer;
