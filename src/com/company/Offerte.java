@@ -4,12 +4,12 @@ public class Offerte {
 
     private int id;
     private String unternehmensname;
-    private double price;
+    private int price;
     private double mehrwertsteuer;
     private String adresse;
     private Ort ort;
 
-    public Offerte(int id, String unternehmensname, double price, double mehrwertsteuer, String adresse, Ort ort) {
+    public Offerte(int id, String unternehmensname, int price, double mehrwertsteuer, String adresse, Ort ort) {
         this.id = id;
         this.unternehmensname = unternehmensname;
         this.price = price;
@@ -40,7 +40,7 @@ public class Offerte {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 

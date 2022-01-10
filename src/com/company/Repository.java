@@ -14,8 +14,8 @@ public class Repository {
         List<Offerte> listeOfferte = new ArrayList<>();
         while (line != null) {
             attributes = line.split(character);
-            //offerte = new Offerte(attributes[0], attributes[1], attributes[2],attributes[3], attributes[4], Ort.valueOf(attributes[5]));
-            //listeOfferte.add(offerte);
+            offerte = new Offerte(Integer.parseInt(attributes[0]), attributes[1], Integer.parseInt(attributes[2]), Double.parseDouble(attributes[3]), attributes[4], Ort.valueOf(attributes[5]));
+            listeOfferte.add(offerte);
 
             line = bufferedReader.readLine();
         }

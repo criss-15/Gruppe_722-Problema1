@@ -1,13 +1,13 @@
 package com.company;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class Service {
 
-    public List<Offerte> sortListeTiereByName(List<Offerte> liste) {
-        return liste.stream()
-                //.sorted((offerte, otherOfferte) -> offerte.getPrice() > otherOfferte.getPrice())
-                .collect(Collectors.toList());
+    public List<Offerte> sortListeOffertePrice(List<Offerte> liste) {
+        Comparator<Offerte> studentComparator = Comparator.comparing(Offerte::getPrice);
+        return liste.stream().sorted(studentComparator).toList();
     }
 }
